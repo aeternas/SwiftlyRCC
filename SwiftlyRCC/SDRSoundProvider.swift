@@ -4,5 +4,5 @@
 import Foundation
 
 class SDRSoundProvider: AbstractSoundProvider {
-    func getSound(with url: URL) -> SDRSound? { return nil }
+    func getSound(with url: URL) -> AnySDRSound? { return nil }
 }
