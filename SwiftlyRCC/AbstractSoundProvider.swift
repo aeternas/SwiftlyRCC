@@ -4,5 +4,6 @@
 import Foundation
 
 protocol AbstractSoundProvider: AnyObject {
-    func getSound(with url: URL)
+    associatedtype T
+    func getSound(with url: URL) -> T?
 }
