@@ -11,6 +11,7 @@
 		2C1AAA9623412AA500A7DF99 /* AbstractSoundProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1AAA9523412AA500A7DF99 /* AbstractSoundProvider.swift */; };
 		2C4B58712341DF7E00AEC0B0 /* SDRSoundProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B58702341DF7E00AEC0B0 /* SDRSoundProvider.swift */; };
 		2C4B58732341DF9000AEC0B0 /* AnySDRSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B58722341DF9000AEC0B0 /* AnySDRSound.swift */; };
+		2C7A99542343D9510028EB00 /* WAVSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7A99532343D9510028EB00 /* WAVSound.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		2C1AAA9523412AA500A7DF99 /* AbstractSoundProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractSoundProvider.swift; sourceTree = "<group>"; };
 		2C4B58702341DF7E00AEC0B0 /* SDRSoundProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRSoundProvider.swift; sourceTree = "<group>"; };
 		2C4B58722341DF9000AEC0B0 /* AnySDRSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnySDRSound.swift; sourceTree = "<group>"; };
+		2C7A99532343D9510028EB00 /* WAVSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAVSound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				2C1AAA9523412AA500A7DF99 /* AbstractSoundProvider.swift */,
 				2C4B58702341DF7E00AEC0B0 /* SDRSoundProvider.swift */,
 				2C4B58722341DF9000AEC0B0 /* AnySDRSound.swift */,
+				2C7A99532343D9510028EB00 /* WAVSound.swift */,
 			);
 			path = SwiftlyRCC;
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C1AAA9623412AA500A7DF99 /* AbstractSoundProvider.swift in Sources */,
+				2C7A99542343D9510028EB00 /* WAVSound.swift in Sources */,
 				2C1AAA8F2341292300A7DF99 /* main.swift in Sources */,
 				2C4B58712341DF7E00AEC0B0 /* SDRSoundProvider.swift in Sources */,
 				2C4B58732341DF9000AEC0B0 /* AnySDRSound.swift in Sources */,
