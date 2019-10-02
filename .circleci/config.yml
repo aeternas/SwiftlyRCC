@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Install swift dependencies
-          command: sudo apt update && sudo apt install swiftc --yes
+          command: apt update && apt install swiftc --yes
       - run:
           name: Building main.swift
           command: swiftc main.swift
