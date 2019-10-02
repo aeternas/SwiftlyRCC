@@ -21,4 +21,4 @@ jobs:
       - run: echo "Debug step" && ls -lia && pwd
       - run:
           name: Run main.swift
-          command: swift main.swift
+          command: /opt/swift/usr/bin/swift main.swift
