@@ -15,7 +15,7 @@ jobs:
             tar xzf swift-4.2.1-RELEASE-ubuntu18.04.tar.gz && \
             mv swift-4.2.1-RELEASE-ubuntu18.04 /opt/swift && \
             echo 'export PATH=/opt/swift/usr/bin:$PATH' >> $BASH_ENV && \
-            source  ~/.bashrc
+            source  ~/.bashrc && \
             ls -lia /opt/swift/usr/bin && \
             echo $PATH && \
       - run: echo "Debug step" && ls -lia && pwd
