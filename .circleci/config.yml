@@ -16,6 +16,7 @@ jobs:
             mv swift-4.2.1-RELEASE-ubuntu18.04 /opt/swift && \
             echo "export PATH=/opt/swift/swift/usr/bin:$PATH" >> ~/.bashrc && \
             source  ~/.bashrc
+      - run: echo "Debug step" && ls -lia && pwd
       - run:
           name: Building main.swift
           command: swiftc main.swift
