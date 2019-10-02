@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Install dependencies
-          command: apt update && apt install --yes clang libcurl3 libpython2.7 libpython2.7-dev 
+          command: apt update && apt install --yes clang libcurl3 libpython2.7 libpython2.7-dev wget
       - run:
           name: Install swift
           command: |
