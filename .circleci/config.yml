@@ -14,8 +14,7 @@ jobs:
             wget https://swift.org/builds/swift-4.2.1-release/ubuntu1804/swift-4.2.1-RELEASE/swift-4.2.1-RELEASE-ubuntu18.04.tar.gz && \
             tar xzf swift-4.2.1-RELEASE-ubuntu18.04.tar.gz && \
             mv swift-4.2.1-RELEASE-ubuntu18.04 /usr/share/swift && \
-            echo "export PATH=/usr/share/swift/usr/bin:$PATH" >> ~/.bashrc && \
-            source  ~/.bashrc
+            export PATH=/usr/share/swift/usr/bin:"${PATH}"
       - run: echo "Debug step" && ls -lia && pwd && echo $PATH && ls /usr/share/swift/usr/bin -lia
       - run:
           name: Run main.swift
