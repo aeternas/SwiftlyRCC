@@ -16,7 +16,7 @@ jobs:
             mv swift-4.2.1-RELEASE-ubuntu18.04 /usr/share/swift && \
             echo "export PATH=/usr/share/swift/usr/bin:$PATH" >> ~/.bashrc && \
             source  ~/.bashrc
-      - run: echo "Debug step" && ls -lia && pwd
+      - run: echo "Debug step" && ls -lia && pwd && echo $PATH && ls /usr/share/swift/usr/bin -lia
       - run:
           name: Run main.swift
           command: swift --version && SwiftlyRCC/main.swift
