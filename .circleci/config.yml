@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: ubuntu:18.04
     environment:
-      BASH_ENV: /etc/bash.bashrc
+      BASH_ENV: $HOME/.bashrc
     steps:
       - checkout
       - run:
