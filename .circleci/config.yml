@@ -7,7 +7,10 @@ jobs:
       - checkout
       - run:
           name: Remove `main.swift` if built on Linux
-          command: (/etc/os-release -a && rm Sources/SwiftlyRCC/main.swift) || true
+          command: |
+            if [[ $(uname -s) == Linux ]]; then
+              rm Sources/SwiftlyRCC/main.swift
+            fi
       - run:
           name: Build project
           command: |
