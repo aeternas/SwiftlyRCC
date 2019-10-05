@@ -14,6 +14,7 @@ jobs:
           name: Install swift
           command: |
             touch $HOME/.bashrc && \
+            stat $HOME/.bashrc && \
             wget https://swift.org/builds/swift-4.2.1-release/ubuntu1804/swift-4.2.1-RELEASE/swift-4.2.1-RELEASE-ubuntu18.04.tar.gz && \
             tar xzf swift-4.2.1-RELEASE-ubuntu18.04.tar.gz && \
             mv swift-4.2.1-RELEASE-ubuntu18.04 /usr/share/swift && \
