@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: ubuntu:18.04
+    shell: /bin/bash -leo pipefail
     environment:
       BASH_ENV: /root/.bashrc
     steps:
