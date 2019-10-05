@@ -6,6 +6,12 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install swift && run
+          name: Remove `main.swift` if built on Linux
+          command: |
+            if [[ $(uname -s) == Linux ]]; then
+              rm Sources/SwiftlyRCC/main.swift
+            fi
+      - run:
+          name: Build project
           command: |
             swift build
