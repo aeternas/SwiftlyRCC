@@ -6,6 +6,9 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install swift && run
+          name: Remove `main.swift`
+          command: rm Sources/SwiftlyRCC/main.swift
+      - run:
+          name: Build project
           command: |
             swift build
