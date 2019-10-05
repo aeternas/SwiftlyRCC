@@ -23,4 +23,5 @@ jobs:
             pwd && \
             echo $PATH && \
             ls /usr/share/swift/usr/bin -lia && \
+            ls -lia SwiftlyRCC && \
             swiftc --version && SwiftlyRCC/main.swift
