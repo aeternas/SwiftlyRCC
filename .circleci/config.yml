@@ -6,8 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Remove `main.swift`
-          command: rm Sources/SwiftlyRCC/main.swift
+          name: Remove `main.swift` if built on Linux
+          command: lsb_release -a && rm Sources/SwiftlyRCC/main.swift
       - run:
           name: Build project
           command: |
