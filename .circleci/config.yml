@@ -22,6 +22,6 @@ jobs:
             ls -lia && \
             pwd && \
             echo $PATH && \
+            ls -lia && \
             ls /usr/share/swift/usr/bin -lia && \
-            ls -lia SwiftlyRCC && \
             swift build
