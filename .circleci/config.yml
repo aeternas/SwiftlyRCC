@@ -3,9 +3,6 @@ jobs:
   build:
     docker:
       - image: ubuntu:18.04
-    shell: /bin/bash -leo pipefail
-    environment:
-      BASH_ENV: /root/.bashrc
     steps:
       - checkout
       - run:
@@ -14,17 +11,13 @@ jobs:
       - run:
           name: Install swift && run
           command: |
-            touch $HOME/.bashrc && \
-            stat $HOME/.bashrc && \
             wget https://swift.org/builds/swift-4.2.1-release/ubuntu1804/swift-4.2.1-RELEASE/swift-4.2.1-RELEASE-ubuntu18.04.tar.gz && \
             tar xzf swift-4.2.1-RELEASE-ubuntu18.04.tar.gz && \
             mv swift-4.2.1-RELEASE-ubuntu18.04 /usr/share/swift && \
-            echo 'export PATH=/usr/share/swift/usr/bin:$PATH' >> $BASH_ENV && \
-            echo $BASH_ENV && \
-            source $BASH_ENV && \
+            echo 'export PATH=/usr/share/swift/usr/bin:$PATH' >> ~/.profile && \
+            source ~/.profile && \
             echo $HOME && \
             stat /etc/bash.bashrc && \
-            echo $BASH_ENV && \
             echo "Debug step" && \
             ls -lia && \
             pwd && \
