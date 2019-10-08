@@ -1,10 +1,17 @@
+aliases:
+  - &git_checkout
+    name: Checkout
+    command: |
+      mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+      git clone --depth 1 -b $CIRCLE_BRANCH $CIRCLE_REPOSITORY_URL ./ && \
+      git checkout $CIRCLE_SHA1
 version: 2
 jobs:
   build:
     docker:
       - image: swift:5.0
     steps:
-      - checkout
+      - run: *git_checkout
       - run:
           name: Remove `main.swift` if built on Linux
           command: |
