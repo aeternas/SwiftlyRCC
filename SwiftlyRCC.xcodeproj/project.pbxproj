@@ -66,6 +66,33 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		2C6ED291234E6872001FF63C /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				2CAF117F2348F8D000DFF839 /* AbstractSoundProvider.swift */,
+				2CAF11812348F8D000DFF839 /* SDRSoundProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		2C6ED292234E6887001FF63C /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				2CAF203B234A2D2700DFF839 /* AbstractSoundDataConverter.swift */,
+				2CAF203D234A2FFD00DFF839 /* WAVSoundConverter.swift */,
+			);
+			path = Converter;
+			sourceTree = "<group>";
+		};
+		2C6ED293234E689F001FF63C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CAF117D2348F8D000DFF839 /* AnySDRSound.swift */,
+				2CAF117E2348F8D000DFF839 /* WAVSound.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2CAF117B2348F8D000DFF839 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,13 +104,10 @@
 		2CAF117C2348F8D000DFF839 /* SwiftlyRCC */ = {
 			isa = PBXGroup;
 			children = (
-				2CAF117D2348F8D000DFF839 /* AnySDRSound.swift */,
-				2CAF117E2348F8D000DFF839 /* WAVSound.swift */,
-				2CAF117F2348F8D000DFF839 /* AbstractSoundProvider.swift */,
+				2C6ED291234E6872001FF63C /* Provider */,
+				2C6ED292234E6887001FF63C /* Converter */,
+				2C6ED293234E689F001FF63C /* Model */,
 				2CAF11802348F8D000DFF839 /* main.swift */,
-				2CAF11812348F8D000DFF839 /* SDRSoundProvider.swift */,
-				2CAF203B234A2D2700DFF839 /* AbstractSoundDataConverter.swift */,
-				2CAF203D234A2FFD00DFF839 /* WAVSoundConverter.swift */,
 			);
 			path = SwiftlyRCC;
 			sourceTree = "<group>";
