@@ -5,6 +5,12 @@ aliases:
       mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
       git clone --depth 1 -b $CIRCLE_BRANCH $CIRCLE_REPOSITORY_URL ./ && \
       git checkout $CIRCLE_SHA1
+  - &adapt_for_linux
+    name: Remove `main.swift` if built on Linux
+    command: |
+      if [[ $(uname -s) == Linux ]]; then
+        rm Sources/SwiftlyRCC/main.swift
+      fi
 version: 2
 jobs:
   build:
@@ -12,12 +18,7 @@ jobs:
       - image: swift:5.0
     steps:
       - run: *git_checkout
-      - run:
-          name: Remove `main.swift` if built on Linux
-          command: |
-            if [[ $(uname -s) == Linux ]]; then
-              rm Sources/SwiftlyRCC/main.swift
-            fi
+      - run: *adapt_for_linux
       - run:
           name: Build project
           command: |
