@@ -11,10 +11,10 @@ aliases:
       if [[ $(uname -s) == Linux ]]; then
         rm Sources/SwiftlyRCC/main.swift
       fi
-   - &build
-     name: Build project
-     command: |
-       swift build
+  - &build
+    name: Build project
+    command: |
+      swift build
 version: 2
 jobs:
   build:
