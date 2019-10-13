@@ -15,11 +15,13 @@ aliases:
     name: Build project
     command: |
       swift build
+  - &docker_image
+    docker:
+      - image: swift:5.0
 version: 2
 jobs:
   build:
-    docker:
-      - image: swift:5.0
+    *docker_image
     steps:
       - run: *git_checkout
       - run: *adapt_for_linux
