@@ -16,7 +16,7 @@ aliases:
     command: |
       swift build
   - &docker_worker
-    - image: swift:5.0
+    - image: swift:5.1
 version: 2.1
 jobs:
   build:
