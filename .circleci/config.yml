@@ -9,7 +9,7 @@ aliases:
     name: Remove `main.swift` if built on Linux
     command: |
       if [[ $(uname -s) == Linux ]]; then
-        git rm Sources/SwiftlyRCC/main.swift && rm Sources/SwiftlyRCC/main.swift
+        (git rm Sources/SwiftlyRCC/main.swift && rm Sources/SwiftlyRCC/main.swift) || true
       fi
   - &build
     name: Build project
